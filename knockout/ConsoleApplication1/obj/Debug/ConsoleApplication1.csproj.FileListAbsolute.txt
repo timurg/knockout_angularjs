@@ -1,0 +1,6 @@
+D:\work\knockout\knockout\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\work\knockout\knockout\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\work\knockout\knockout\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\work\knockout\knockout\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\work\knockout\knockout\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\work\knockout\knockout\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

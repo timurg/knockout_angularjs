@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h1>AJAX загрузка</h1>
+<ul>
+    <!-- ko foreach: books -->
+    <li data-bind="text: $data"></li>
+    <!-- /ko -->
+</ul>
+<a id="loadData" class="btn btn-default">Загрузить данные</a>
+<script>
+    function ViewModel()
+    {
+        var self = this;
+        self.books = ko.observableArray([]);
+        self.reciveData = function (data) {
+            console.log("Данные загружены.");
+            self.books.removeAll();
+            for (i = 0; i<data.length; i++) {
+                self.books.push(data[i]);
+            }
+        };
+    };
+    var main_context = new ViewModel();
+
+    ko.applyBindings(main_context);
+    
+    function getDataValues() {
+        $.ajax({
+            url: '/api/Values',
+            type: 'get',
+            dataType: 'json'
+        }).
+            success(main_context.reciveData);
+    }
+
+    $("#loadData").click(getDataValues);
+</script> 
